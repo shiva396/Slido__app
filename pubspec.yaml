@@ -1,0 +1,47 @@
+name: slido
+description: A new Flutter project.
+
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.18.2 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  google_fonts: ^3.0.1
+  provider: ^6.0.4
+  lottie: ^2.0.0
+  url_launcher: ^6.1.6
+  permission_handler: ^10.2.0
+  animated_splash_screen: ^1.0.1+2
+  flutter_stateless_chessboard: ^0.0.7
+  chess: ^0.7.0
+  audioplayers: ^1.2.0
+  concentric_transition: ^1.0.3
+  blockquote: ^0.0.1
+  shared_preferences: ^2.0.15
+  double_back_to_close: ^2.0.0
+  rename: ^2.0.1
+  assets_audio_player: ^3.0.6
+
+  
+
+dev_dependencies:
+  flutter_launcher_icons: ^0.11.0
+
+
+flutter_icons:
+  android: true
+  image_path: "assets/images/slido1.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/animation/
+    - assets/audio/
+ 
+
