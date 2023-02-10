@@ -41,7 +41,7 @@ class CardPlanet extends StatelessWidget {
               const Spacer(flex: 3),
               Flexible(
                 flex: 20,
-                child: Image(image: data.image),
+                child: Image(image: data.image,alignment: Alignment.center,),
               ),
               const Spacer(flex: 1),
               Text(
@@ -54,7 +54,7 @@ class CardPlanet extends StatelessWidget {
                 ),
                 maxLines: 1,
               ),
-              const Spacer(flex: 1),
+              //const Spacer(flex: 1),
               Text(
                 data.subtitle,
                 style: TextStyle(

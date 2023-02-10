@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:launch_review/launch_review.dart';
 import 'package:slido/screen.dart';
 import 'package:slido/widgets/chess.dart';
 import 'package:slido/widgets/quotelang.dart';
@@ -29,11 +30,11 @@ class _SideState extends State<Side> {
               begin: Alignment.topRight,
               end: Alignment.bottomCenter,
               colors: [
-                Color.fromARGB(255, 0, 0, 48),
                 Color.fromARGB(255, 116, 52, 124),
+                Color.fromARGB(255, 0, 0, 48),
               ],
               stops: [
-                0.5,
+                0.7,
                 0.9
               ])),
       child: Column(children: [
@@ -94,7 +95,7 @@ class _SideState extends State<Side> {
           ),
         ),
         SizedBox(
-          height: 50,
+          height: 30,
         ),
         Container(
           alignment: Alignment.center,
@@ -187,7 +188,7 @@ class _SideState extends State<Side> {
           ),
         ),
         SizedBox(
-          height: 50,
+          height: 30,
         ),
         Container(
           alignment: Alignment.center,
@@ -223,12 +224,16 @@ class _SideState extends State<Side> {
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 30,
         ),
         Container(
           alignment: Alignment.center,
           child: GestureDetector(
-            onTap: () {},
+            onTap: () {
+              LaunchReview.launch(
+                androidAppId: "com.softrate.slido",
+              );
+            },
             child: Row(
               children: [
                 SizedBox(
@@ -250,32 +255,36 @@ class _SideState extends State<Side> {
           ),
         ),
         SizedBox(
-          height: 40,
+          height: 30,
         ),
         Container(
           alignment: Alignment.center,
           child: GestureDetector(
-            onTap: () {showDialog(
-    context: context,
-    builder: (_) {
-      return AlertDialog(
-        title: Text('Wanna Exit?'),
-       
-        actions: [
-          ElevatedButton(
-            onPressed: () => Navigator.pop(context, false), // passing false
-            child: Text('No'),
-          ),
-          SizedBox(width: 5,),
-          ElevatedButton(
-            onPressed: () => exit(0), // passing true
-            child: Text('Yes'),
-          ),
-        ],
-      );
-    }).then((exit) {
-  if (exit == null) return;
-});},
+            onTap: () {
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return AlertDialog(
+                      title: Text('Wanna Exit?'),
+                      actions: [
+                        ElevatedButton(
+                          onPressed: () =>
+                              Navigator.pop(context, false), // passing false
+                          child: Text('No'),
+                        ),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        ElevatedButton(
+                          onPressed: () => exit(0), // passing true
+                          child: Text('Yes'),
+                        ),
+                      ],
+                    );
+                  }).then((exit) {
+                if (exit == null) return;
+              });
+            },
             child: Row(
               children: [
                 SizedBox(
@@ -308,8 +317,12 @@ class _SideState extends State<Side> {
                 height: 50,
                 width: 120,
               ),
-              const Text('Softrate India',style: TextStyle(color: Colors.white),),
-              const Text('®All rights Reserved',style: TextStyle(color: Colors.white)),
+              const Text(
+                'Softrate India',
+                style: TextStyle(color: Colors.white),
+              ),
+              const Text('®All rights Reserved',
+                  style: TextStyle(color: Colors.white)),
               SizedBox(
                 height: 10,
               )

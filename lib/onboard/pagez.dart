@@ -21,8 +21,8 @@ class OnboardingPage extends StatelessWidget {
       background: LottieBuilder.asset("assets/animation/blue.json"),
     ),
     CardPlanetData(
-      title: "Have calmsound",
-      subtitle: "LoFi make you feel good",
+      title: "             Have calmsound",
+      subtitle: "                  LoFi make you feel good",
       image: AssetImage('assets/images/listenmusic.png'),
       backgroundColor: Colors.white,
       titleColor: Colors.purple,

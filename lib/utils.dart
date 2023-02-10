@@ -13,7 +13,6 @@ TextStyle ts(double size, [Color? color, FontWeight? fw]) {
   return GoogleFonts.raleway(fontSize: size, color: color, fontWeight: fw);
 }
 
-
 List Quotes = [
   "H.O.P.E => Hold On Pain Ends",
   "Impossible is just a option",
@@ -25,6 +24,14 @@ List Quotes = [
   "In POV: Future is your Gift"
 ];
 
+/*List music = [
+  'audio/calmsound1.mp3',
+  'audio/calmsound1.mp3',
+  'audio/calmsound1.mp3',
+  'audio/calmsound1.mp3',
+  'audio/calmsound1.mp3',
+  'audio/calmsound1.mp3',
+];*/
 List selectableTimes = [
   "0",
   "300",
