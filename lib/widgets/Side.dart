@@ -231,7 +231,7 @@ class _SideState extends State<Side> {
           child: GestureDetector(
             onTap: () {
               LaunchReview.launch(
-                androidAppId: "com.softrate.slido",
+                androidAppId: "com.softrate.android.app",
               );
             },
             child: Row(
