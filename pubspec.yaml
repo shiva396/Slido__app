@@ -28,9 +28,8 @@ dependencies:
   google_mobile_ads: ^2.3.0
   audioplayers: ^2.0.0
   shimmer: ^2.0.0
-
   
-
+  
 dev_dependencies:
   flutter_launcher_icons: ^0.11.0
 
